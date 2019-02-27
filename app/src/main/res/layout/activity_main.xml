@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
     tools:context=".MainActivity">
 
     <EditText
@@ -16,6 +17,7 @@
         android:ems="10"
         android:hint="@string/editText_hint_quantity"
         android:inputType="number"
+        android:nextFocusDown="@id/editText_product"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,6 +33,7 @@
         android:ems="10"
         android:hint="@string/editText_hint_product"
         android:inputType="text"
+        android:imeOptions="actionGo"
         app:layout_constraintEnd_toStartOf="@+id/button_add_product"
         app:layout_constraintStart_toEndOf="@+id/editText_quantity"
         app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +50,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/lv_dynamic"
+        android:id="@+id/lv_shopping_memo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"

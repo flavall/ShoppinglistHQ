@@ -5,11 +5,13 @@ public class ShoppingMemo {
     private String product;
     private int quantity;
     private long id;
+    private boolean checked;
 
-    public ShoppingMemo(String product, int quantity, long id) {
+    public ShoppingMemo(String product, int quantity, long id, boolean checked) {
         this.product = product;
         this.quantity = quantity;
         this.id = id;
+        this.checked = checked;
     }
 
     public String getProduct() {
@@ -36,8 +38,16 @@ public class ShoppingMemo {
         this.id = id;
     }
 
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
+
     @Override
     public String toString() {
-        return quantity + " x " + product ;
+        return quantity + " x " + product;
     }
 }
